@@ -1,5 +1,7 @@
 # NotionExpenseTrack
 
+[English](README.en.md) | 简体中文
+
 把微信支付和支付宝账单整理成可审核的交易记录，再按需导入自己的 Notion 财务工作区。可从 [Finance Tracker 模板（Vince Lin）](https://www.notion.com/templates/finance-credit-budget-tracker) 开始，并在自己的模板副本中配置数据源。项目提供命令行流程和本机网页控制台；网页只监听本机地址，账单与运行记录保存在本地。
 
 ## 功能
