@@ -1,0 +1,2 @@
+# Required only when reading XLSX exports; CSV exports use the standard library.
+openpyxl>=3.1,<4

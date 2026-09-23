@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="在本机整理、审核并导入微信支付与支付宝账单。账单和运行记录保存在本地。"><meta name="theme-color" content="#20212a"><title>NotionExpenseTrack · 账单管理</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <aside class="rail"><div class="brand" aria-label="NotionExpenseTrack">NE</div><button class="nav active" aria-current="page">流程</button><button class="nav" id="historyNav">运行记录</button><div class="rail-foot">本机运行</div></aside>
+  <main>
+    <header><div><div class="eyebrow">NOTION EXPENSE TRACK / WORKFLOW</div><h1>账单流程</h1></div><button id="newBtn" class="primary">＋ 新建运行</button></header>
+    <section id="welcome" class="welcome">
+      <div class="welcome-copy"><span class="eyebrow">LOCAL AUTOMATION</span><h2 id="welcomeTitle">账单处理，一步步看得见。</h2><p>上传账单后，按流程完成归一化、人工审核、Jev 分类和 Notion 导入。</p><button class="primary" id="startBtn">开始处理账单 <span>→</span></button></div>
+      <div class="flow-preview" aria-label="账单处理步骤"><div class="preview-node done"><i>↥</i><b>上传账单</b><small>微信 · 支付宝</small></div><div class="line"></div><div class="preview-node"><i>▤</i><b>整理与复核</b><small>交易归一化</small></div><div class="line"></div><div class="preview-node"><i>✳</i><b>Jev 分类</b><small>建议与概率</small></div><div class="line"></div><div class="preview-node"><i>↗</i><b>Notion 导入</b><small>预览后确认</small></div></div>
+    </section>
+    <section id="workspace" class="hidden" aria-label="当前账单流程">
+      <div class="runbar"><div><span class="eyebrow">当前运行</span><h2 id="runTitle">—</h2><div id="runMeta" class="muted"></div></div><span id="runBadge" class="badge">等待中</span></div>
+      <div class="canvas-wrap"><div class="canvas" id="canvas"></div></div>
+      <section id="panel" class="panel hidden"></section>
+    </section>
+    <section id="history" class="hidden" aria-label="运行记录"><div class="section-title"><div><span class="eyebrow">EXECUTION HISTORY</span><h2>运行记录</h2></div><button id="backBtn" class="subtle">返回流程</button></div><div id="historyList" class="history-list"></div></section>
+  </main>
+  <dialog id="newDialog"><form id="newForm" method="dialog"><div class="dialog-head"><div><span class="eyebrow">NEW RUN</span><h2>选择账单</h2></div><button type="button" class="close" id="closeDialog">×</button></div><label>账单月份<input name="month" type="month" required></label><div class="upload-grid"><label class="upload"><span class="upload-icon">◉</span><b>微信支付</b><small>CSV 或 XLSX</small><input name="wechat" type="file" accept=".csv,.xlsx" multiple></label><label class="upload"><span class="upload-icon">◈</span><b>支付宝</b><small>CSV 或 XLSX</small><input name="alipay" type="file" accept=".csv,.xlsx" multiple></label></div><div class="dialog-actions"><span id="formError" class="error"></span><button class="primary" type="submit">上传并开始 <span>→</span></button></div></form></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div><script src="/app.js"></script>
+</body>
+</html>

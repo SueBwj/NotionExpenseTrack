@@ -1,0 +1,22 @@
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+
+# Private bill exports and generated transaction data
+data/
+input/
+output/
+*.csv
+*.xlsx
+*.zip
+
+# Local assets may contain account screenshots or financial details
+assets/
+
+# Python and editor files
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
