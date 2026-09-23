@@ -65,7 +65,7 @@ python flow_console.py
 - 六个 `NOTION_*_DATA_SOURCE_ID`：支出、收入/退款、类别、账户、订阅和转账数据源 ID。
 - `NOTION_WECHAT_ACCOUNT_ID`、`NOTION_ALIPAY_ACCOUNT_ID`、`NOTION_BANK_ACCOUNT_ID`：对应付款账户页面 ID；银行卡账户 ID 可按你的银行账户设置。
 
-在 在 Notion 中把需要访问的数据源共享给 integration，并授予读取和写入权限。Finance Tracker 模板的不同副本可能有不同的数据库 ID；从模板复制到自己的工作区后，填入自己副本的数据源与账户页面 ID。数据源需提供名称、日期、金额、账户关联、类别关联和来源键等导入器使用的属性。若自定义过模板字段，请核对 `notion_import.py` 中的属性名称是否与工作区一致。
+在 Notion 中把需要访问的数据源共享给 integration，并授予读取和写入权限。Finance Tracker 模板的不同副本可能有不同的数据库 ID；从模板复制到自己的工作区后，填入自己副本的数据源与账户页面 ID。数据源需提供名称、日期、金额、账户关联、类别关联和来源键等导入器使用的属性。若自定义过模板字段，请核对 `notion_import.py` 中的属性名称是否与工作区一致。
 
 ## 隐私与数据安全
 
