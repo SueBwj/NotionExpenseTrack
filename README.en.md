@@ -1,6 +1,6 @@
 # NotionExpenseTrack
 
-[English] | [简体中文](README.md)
+[English](README.en.md) | [简体中文](README.md)
 
 Turn WeChat Pay and Alipay statements into reviewable transactions, then import them into your own Notion finance workspace when ready. You can start with the [Finance Tracker template by Vince Lin](https://www.notion.com/templates/finance-credit-budget-tracker) and configure the data sources in your own copy. The project includes a command-line workflow and a local web console. The console listens only on your local machine, and bills and run history stay on disk.
 
